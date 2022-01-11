@@ -1,0 +1,115 @@
+	Mon Jan 10 02:08 2022 Time and Allocation Profiling Report  (Final)
+
+	   advent2021-exe.exe +RTS -N -p -RTS
+
+	total time  =        0.00 secs   (7 ticks @ 1000 us, 16 processors)
+	total alloc = 389,064,664 bytes  (excludes profiling overheads)
+
+COST CENTRE          MODULE    SRC                          %time %alloc
+
+var                  P24a      src\P24a.hs:(81,1)-(84,26)    28.6    0.0
+oneVarInstruction    P24a      src\P24a.hs:(52,1)-(56,63)    28.6   45.0
+twoVarInstruction    P24a      src\P24a.hs:(44,1)-(49,63)    14.3   38.3
+parseInstruction.\   P24a      src\P24a.hs:24:78-107         14.3    0.0
+oneVarInstruction.a' P24a      src\P24a.hs:53:9-23           14.3    0.0
+toDigits             P24a      src\P24a.hs:65:1-66            0.0    5.5
+safeMod              P24a      src\P24a.hs:(37,1)-(38,30)     0.0    1.5
+safeDiv              P24a      src\P24a.hs:(33,1)-(34,30)     0.0    1.5
+parseInstruction.\   P24a      src\P24a.hs:21:78-87           0.0    2.3
+parseInstruction.\   P24a      src\P24a.hs:20:78-87           0.0    2.6
+parseInstruction     P24a      src\P24a.hs:(19,1)-(24,112)    0.0    1.9
+
+
+                                                                                                                                                       individual      inherited
+COST CENTRE                           MODULE                              SRC                                                       no.     entries  %time %alloc   %time %alloc
+
+MAIN                                  MAIN                                <built-in>                                                311           0    0.0    0.0   100.0  100.0
+ CAF                                  GHC.Conc.Windows                    <entire-module>                                           593           0    0.0    0.0     0.0    0.0
+ CAF                                  Text.Read.Lex                       <entire-module>                                           590           0    0.0    0.0     0.0    0.0
+ CAF                                  GHC.Show                            <entire-module>                                           573           0    0.0    0.0     0.0    0.0
+ CAF                                  GHC.IO.Handle.Text                  <entire-module>                                           555           0    0.0    0.0     0.0    0.0
+ CAF                                  GHC.IO.Handle.Internals             <entire-module>                                           554           0    0.0    0.0     0.0    0.0
+ CAF                                  GHC.IO.Handle.FD                    <entire-module>                                           553           0    0.0    0.0     0.0    0.0
+ CAF                                  GHC.IO.FD                           <entire-module>                                           551           0    0.0    0.0     0.0    0.0
+ CAF                                  GHC.IO.Exception                    <entire-module>                                           550           0    0.0    0.0     0.0    0.0
+ CAF                                  GHC.IO.Encoding.CodePage            <entire-module>                                           543           0    0.0    0.0     0.0    0.0
+ CAF                                  GHC.IO.Encoding                     <entire-module>                                           542           0    0.0    0.0     0.0    0.0
+ CAF                                  Data.Fixed                          <entire-module>                                           506           0    0.0    0.0     0.0    0.0
+ CAF:$fShowDiffTime1                  Data.Time.Clock.Internal.DiffTime   <no location info>                                        380           0    0.0    0.0     0.0    0.0
+ CAF:aggregateInstructions            P24a                                src\P24a.hs:41:1-21                                       494           0    0.0    0.0     0.0    0.0
+  aggregateInstructions               P24a                                src\P24a.hs:41:1-36                                       641           1    0.0    0.0     0.0    0.0
+ CAF:getCurrentTime1                  Data.Time.Clock.POSIX               <no location info>                                        348           0    0.0    0.0     0.0    0.0
+  getCurrentTime                      Data.Time.Clock.POSIX               lib\Data\Time\Clock\POSIX.hs:33:1-53                      624           1    0.0    0.0     0.0    0.0
+ CAF:getSystemTime1                   Data.Time.Clock.Internal.SystemTime <no location info>                                        444           0    0.0    0.0     0.0    0.0
+  getSystemTime                       Data.Time.Clock.Internal.SystemTime lib\Data\Time\Clock\Internal\SystemTime.hs:(60,1)-(66,43) 626           1    0.0    0.0     0.0    0.0
+ CAF:getSystemTime_win32_epoch_adjust Data.Time.Clock.Internal.SystemTime lib\Data\Time\Clock\Internal\SystemTime.hs:66:5-22        443           0    0.0    0.0     0.0    0.0
+  getSystemTime                       Data.Time.Clock.Internal.SystemTime lib\Data\Time\Clock\Internal\SystemTime.hs:(60,1)-(66,43) 676           0    0.0    0.0     0.0    0.0
+   getSystemTime.win32_epoch_adjust   Data.Time.Clock.Internal.SystemTime lib\Data\Time\Clock\Internal\SystemTime.hs:66:5-43        677           1    0.0    0.0     0.0    0.0
+ CAF:initVars                         P24a                                src\P24a.hs:74:1-8                                        490           0    0.0    0.0     0.0    0.0
+  initVars                            P24a                                src\P24a.hs:74:1-23                                       663           1    0.0    0.0     0.0    0.0
+ CAF:main1                            Main                                <no location info>                                        319           0    0.0    0.0     0.0    0.0
+  main                                Main                                app\Main.hs:(7,1)-(13,45)                                 622           1    0.0    0.0     0.0    0.0
+ CAF:main2                            Main                                <no location info>                                        318           0    0.0    0.0     0.0    0.0
+ CAF:noZeroes                         P24a                                src\P24a.hs:68:1-8                                        498           0    0.0    0.0     0.0    0.0
+  noZeroes                            P24a                                src\P24a.hs:68:1-20                                       634           1    0.0    0.0     0.0    0.0
+ CAF:parse                            P24a                                src\P24a.hs:16:1-5                                        501           0    0.0    0.0     0.0    0.0
+  parse                               P24a                                src\P24a.hs:16:1-60                                       639           1    0.0    0.0     0.0    0.0
+ CAF:parseBinaryInstruction3          P24a                                <no location info>                                        497           0    0.0    0.0     0.0    0.0
+  parseBinaryInstruction              P24a                                src\P24a.hs:(27,1)-(30,25)                                655           0    0.0    0.0     0.0    0.0
+ CAF:run                              P24a                                src\P24a.hs:13:1-3                                        502           0    0.0    0.0     0.0    0.0
+  run                                 P24a                                src\P24a.hs:13:1-19                                       629           1    0.0    0.0     0.0    0.0
+ CAF:toDigits                         P24a                                src\P24a.hs:65:1-8                                        493           0    0.0    0.0     0.0    0.0
+  toDigits                            P24a                                src\P24a.hs:65:1-66                                       636           1    0.0    0.0     0.0    0.0
+ main                                 Main                                app\Main.hs:(7,1)-(13,45)                                 623           0    0.0    0.0   100.0  100.0
+  utctDayTime                         Data.Time.Clock.Internal.UTCTime    lib\Data\Time\Clock\Internal\UTCTime.hs:29:5-15           673           2    0.0    0.0     0.0    0.0
+  -                                   Data.Time.Clock.Internal.DiffTime   lib\Data\Time\Clock\Internal\DiffTime.hs:45:5-56          686           1    0.0    0.0     0.0    0.0
+  main.result                         Main                                app\Main.hs:10:9-26                                       628           1    0.0    0.0   100.0  100.0
+   run                                P24a                                src\P24a.hs:13:1-19                                       630           0    0.0    0.0   100.0  100.0
+    solve                             P24a                                src\P24a.hs:59:1-94                                       631           1    0.0    0.0   100.0   99.8
+     isValid                          P24a                                src\P24a.hs:62:1-87                                       632           1    0.0    0.1   100.0   99.7
+      isValid.\                       P24a                                src\P24a.hs:62:31-75                                      633       10000    0.0    0.0   100.0   94.1
+       apply                          P24a                                src\P24a.hs:71:1-62                                       638        6561    0.0    0.0   100.0   94.1
+        parse                         P24a                                src\P24a.hs:16:1-60                                       643           0    0.0    0.0   100.0   94.1
+         aggregateInstructions        P24a                                src\P24a.hs:41:1-36                                       644           0    0.0    0.0     0.0    0.0
+         parseInstruction             P24a                                src\P24a.hs:(19,1)-(24,112)                               646           0    0.0    1.9   100.0   94.1
+          parseInstruction.\          P24a                                src\P24a.hs:19:66-98                                      647       91854    0.0    0.9     0.0    0.9
+           setVar                     P24a                                src\P24a.hs:(87,1)-(90,42)                                664       91854    0.0    0.0     0.0    0.0
+          parseBinaryInstruction      P24a                                src\P24a.hs:(27,1)-(30,25)                                650           0    0.0    0.0   100.0   91.2
+           oneVarInstruction          P24a                                src\P24a.hs:(52,1)-(56,63)                                651      918540   28.6   45.0    57.1   50.6
+            oneVarInstruction.a'      P24a                                src\P24a.hs:53:9-23                                       669      918540   14.3    0.0    28.6    0.0
+             var                      P24a                                src\P24a.hs:(81,1)-(84,26)                                670      918540   14.3    0.0    14.3    0.0
+            setVar                    P24a                                src\P24a.hs:(87,1)-(90,42)                                665      918540    0.0    0.0     0.0    0.0
+            parseInstruction.\        P24a                                src\P24a.hs:20:78-87                                      658      367416    0.0    1.5     0.0    1.5
+            parseInstruction.\        P24a                                src\P24a.hs:21:78-87                                      652      275562    0.0    1.1     0.0    1.1
+            parseInstruction.\        P24a                                src\P24a.hs:24:78-107                                     660       91854    0.0    0.0     0.0    0.0
+            safeDiv                   P24a                                src\P24a.hs:(33,1)-(34,30)                                657       91854    0.0    1.5     0.0    1.5
+            safeMod                   P24a                                src\P24a.hs:(37,1)-(38,30)                                656       91854    0.0    1.5     0.0    1.5
+           twoVarInstruction          P24a                                src\P24a.hs:(44,1)-(49,63)                                653      642978   14.3   38.3    42.9   40.6
+            setVar                    P24a                                src\P24a.hs:(87,1)-(90,42)                                666      642978    0.0    0.0     0.0    0.0
+            twoVarInstruction.a'      P24a                                src\P24a.hs:45:9-23                                       667      642978    0.0    0.0     0.0    0.0
+             var                      P24a                                src\P24a.hs:(81,1)-(84,26)                                668      642978    0.0    0.0     0.0    0.0
+            twoVarInstruction.b'      P24a                                src\P24a.hs:46:9-23                                       671      642978    0.0    0.0    14.3    0.0
+             var                      P24a                                src\P24a.hs:(81,1)-(84,26)                                672      642978   14.3    0.0    14.3    0.0
+            parseInstruction.\        P24a                                src\P24a.hs:21:78-87                                      661      275562    0.0    1.1     0.0    1.1
+            parseInstruction.\        P24a                                src\P24a.hs:20:78-87                                      654      275562    0.0    1.1     0.0    1.1
+            parseInstruction.\        P24a                                src\P24a.hs:24:78-107                                     659       91854   14.3    0.0    14.3    0.0
+       validate                       P24a                                src\P24a.hs:(77,1)-(78,18)                                662        6561    0.0    0.0     0.0    0.0
+      toDigits                        P24a                                src\P24a.hs:65:1-66                                       637           0    0.0    5.5     0.0    5.5
+    parse                             P24a                                src\P24a.hs:16:1-60                                       640           0    0.0    0.1     0.0    0.2
+     parseInstruction                 P24a                                src\P24a.hs:(19,1)-(24,112)                               645         252    0.0    0.0     0.0    0.1
+      parseBinaryInstruction          P24a                                src\P24a.hs:(27,1)-(30,25)                                648         238    0.0    0.1     0.0    0.1
+       parseBinaryInstruction.b'      P24a                                src\P24a.hs:30:15-25                                      649         238    0.0    0.0     0.0    0.0
+     aggregateInstructions            P24a                                src\P24a.hs:41:1-36                                       642           0    0.0    0.0     0.0    0.0
+  show                                Data.Time.Clock.Internal.DiffTime   lib\Data\Time\Clock\Internal\DiffTime.hs:40:5-51          687           1    0.0    0.0     0.0    0.0
+  getCurrentTime                      Data.Time.Clock.POSIX               lib\Data\Time\Clock\POSIX.hs:33:1-53                      625           0    0.0    0.0     0.0    0.0
+   systemToUTCTime                    Data.Time.Clock.System              lib\Data\Time\Clock\System.hs:(29,1)-(45,23)              679           2    0.0    0.0     0.0    0.0
+    systemToUTCTime.(...)             Data.Time.Clock.System              lib\Data\Time\Clock\System.hs:32:5-48                     681           2    0.0    0.0     0.0    0.0
+    systemToUTCTime.time              Data.Time.Clock.System              lib\Data\Time\Clock\System.hs:44:5-63                     684           2    0.0    0.0     0.0    0.0
+     picosecondsToDiffTime            Data.Time.Clock.Internal.DiffTime   lib\Data\Time\Clock\Internal\DiffTime.hs:76:1-48          685           2    0.0    0.0     0.0    0.0
+    systemToUTCTime.timeNanoseconds   Data.Time.Clock.System              lib\Data\Time\Clock\System.hs:38:5-75                     682           2    0.0    0.0     0.0    0.0
+    systemToUTCTime.timePicoseconds   Data.Time.Clock.System              lib\Data\Time\Clock\System.hs:41:5-44                     683           2    0.0    0.0     0.0    0.0
+    systemToUTCTime.timeSeconds       Data.Time.Clock.System              lib\Data\Time\Clock\System.hs:32:5-48                     680           2    0.0    0.0     0.0    0.0
+   getSystemTime                      Data.Time.Clock.Internal.SystemTime lib\Data\Time\Clock\Internal\SystemTime.hs:(60,1)-(66,43) 627           0    0.0    0.0     0.0    0.0
+    getSystemTime.(...)               Data.Time.Clock.Internal.SystemTime lib\Data\Time\Clock\Internal\SystemTime.hs:62:9-61        675           2    0.0    0.0     0.0    0.0
+    getSystemTime.s                   Data.Time.Clock.Internal.SystemTime lib\Data\Time\Clock\Internal\SystemTime.hs:62:9-61        674           2    0.0    0.0     0.0    0.0
+    getSystemTime.us                  Data.Time.Clock.Internal.SystemTime lib\Data\Time\Clock\Internal\SystemTime.hs:62:9-61        678           2    0.0    0.0     0.0    0.0

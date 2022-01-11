@@ -1,0 +1,108 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.34.4.
+--
+-- see: https://github.com/sol/hpack
+
+name:           advent2021
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/githubuser/advent2021#readme>
+homepage:       https://github.com/githubuser/advent2021#readme
+bug-reports:    https://github.com/githubuser/advent2021/issues
+author:         Author name here
+maintainer:     example@example.com
+copyright:      2021 Author name here
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    ChangeLog.md
+
+source-repository head
+  type: git
+  location: https://github.com/githubuser/advent2021
+
+library
+  exposed-modules:
+      Lib
+      P1
+      P10a
+      P10b
+      P11a
+      P12a
+      P12b
+      P13a
+      P14a
+      P14b
+      P15a
+      P15b
+      P16a
+      P16b
+      P17a
+      P17b
+      P18a
+      P18b
+      P19a
+      P19b
+      P1b
+      P20a
+      P21a
+      P21b
+      P22a
+      P22b
+      P23a
+      P23b
+      P24a
+      P24b
+      P25a
+      P2a
+      P2b
+      P3a
+      P3b
+      P4a
+      P4b
+      P5a
+      P5b
+      P6a
+      P7a
+      P7b
+      P8a
+      P8b
+      P9a
+      P9b
+  other-modules:
+      Paths_advent2021
+  hs-source-dirs:
+      src
+  build-depends:
+      base >=4.7 && <5
+    , containers
+    , split
+  default-language: Haskell2010
+
+executable advent2021-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_advent2021
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts= -N
+  build-depends:
+      advent2021
+    , base >=4.7 && <5
+    , time
+  default-language: Haskell2010
+
+test-suite advent2021-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_advent2021
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      advent2021
+    , base >=4.7 && <5
+  default-language: Haskell2010
